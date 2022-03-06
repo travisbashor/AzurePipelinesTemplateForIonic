@@ -5,6 +5,9 @@ steps:
   - script: npm install -g node-sass
     displayName: 'Install Node Sass'
 
+  - script: npm install --save-dev node-gyp@latest
+    displayName: 'Install Node GYP'
+
   - task: Npm@1
     inputs:
       workingDir: '$(Build.SourcesDirectory)/$(projectName)'
