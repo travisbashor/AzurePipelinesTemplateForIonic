@@ -11,7 +11,7 @@ steps:
   - task: Npm@1
     inputs:
       workingDir: '$(Build.SourcesDirectory)/$(projectName)'
-      command: install
+      command: clean-install
     displayName: 'NPM Install'
 
   - powershell: |
