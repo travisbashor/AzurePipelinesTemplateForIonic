@@ -21,21 +21,21 @@ stages:
           - template: ionic-android-debug-build.yml
 
       # Release build
-      - job: Build_Ionic_Android_Release
-        variables:
-          - group: SampleApp-Release
-          - name: buildConfiguration
-            value: Release
-        displayName: Build Release
-        pool:
-          vmImage: $(vmImageName)
-        steps:
-          - template: ionic-android-release-build.yml
-            parameters:
-              keystoreFileName: 'sampleapp-release-key.keystore'
-              keystorePassword: $(keystorePassword)
-              keyAlias: $(keyAlias)
-              keyPassword: $(keyPassword)
+      # - job: Build_Ionic_Android_Release
+      #   variables:
+      #     - group: SampleApp-Release
+      #     - name: buildConfiguration
+      #       value: Release
+      #   displayName: Build Release
+      #   pool:
+      #     vmImage: $(vmImageName)
+      #   steps:
+      #     - template: ionic-android-release-build.yml
+      #       parameters:
+      #         keystoreFileName: 'sampleapp-release-key.keystore'
+      #         keystorePassword: $(keystorePassword)
+      #         keyAlias: $(keyAlias)
+      #         keyPassword: $(keyPassword)
 
   # - stage: Deploy
   #   displayName: Deploy Debug and Release Apps to App Center
