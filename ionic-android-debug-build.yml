@@ -1,6 +1,9 @@
-steps:    
+steps:
   - script: npm install -g @ionic/cli
     displayName: 'Install Ionic CLI'
+
+  - script: npm install -g node-sass
+    displayName: 'Install Node Sass'
 
   - task: Npm@1
     inputs:
